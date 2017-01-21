@@ -1,0 +1,49 @@
+/* Bg: 141414*/
+/* grey: search box 181818*/
+/*light grey: input 222222*/
+/* red: f50915*/
+
+body{
+  background-color: #141414;
+}
+
+a{
+  text-decoration: none;
+  color: #EEE;
+}
+
+.search-box{
+  text-align: center;
+  margin: 15% auto;
+  height: 200px;
+  width: 30%;
+  background-color: #181818;
+  padding: 30px;
+  color: #EEE;
+  border-radius: 5px;
+}
+
+.search-box input{
+  background-color: #222222;
+  border: none;
+  height: 20%;
+  width: 60%;
+  margin: 10px auto;
+  display: block;
+  color: inherit;
+  padding-left: 20px;
+}
+
+.search-box input:focus{
+  outline: 1px solid rgba(255, 255, 255, .4);
+}
+
+.search-box button{
+  background-color: #f50915;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 3px;
+  height: 25%;
+  width: 40%;
+  font-size: 2rem;
+  margin: 40px;
+}

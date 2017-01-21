@@ -1,0 +1,30 @@
+{
+  "name": "netflix-search",
+  "version": "1.0.0",
+  "description": "description",
+  "main": "webpack.config.js",
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack-dev-server"
+  },
+  "author": "Zahier Smith",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.22.1",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.22.0",
+    "babel-register": "^6.22.0",
+    "eslint": "^3.14.0",
+    "eslint-plugin-react": "^6.9.0",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "dependencies": {
+    "axios": "^0.15.3",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-router": "^4.0.0-alpha.5"
+  }
+}
