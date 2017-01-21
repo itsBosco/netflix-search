@@ -1,1 +1,3 @@
-# first-react-app
+# netflix-search
+
+React app using the Netflix Roulette API.
