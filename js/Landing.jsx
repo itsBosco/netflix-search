@@ -23,9 +23,9 @@ const Landing = React.createClass({
             placeholder="The Blacklist"
             autoFocus/>
           <select name="" id="" onChange={this.handleSelect}>
-            <option value="title">title</option>
-            <option value="director">director</option>
-            <option value="actor">actor</option>
+            <option value="title">Title</option>
+            <option value="director">Director</option>
+            <option value="actor">Actor</option>
           </select>
           <Link className="button" to={`/search/${this.state.category}/${this.state.searchValue}`}>
             Search
