@@ -13,7 +13,6 @@ const Landing = React.createClass({
   },
   handleSelect (event) {
     this.setState({category: event.target.value});
-    console.log(event.target.value);
   },
   render() {
     return (
