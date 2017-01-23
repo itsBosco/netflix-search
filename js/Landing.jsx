@@ -37,6 +37,7 @@ const Landing = React.createClass({
   render() {
     return (
       <div className="search-box">
+        <form action="">
           <input
             onChange={this.handleInput} type="text"
             placeholder={this.state.inputPlaceholder}
@@ -46,9 +47,10 @@ const Landing = React.createClass({
             <option value="director">Director</option>
             <option value="actor">Actor</option>
           </select>
-          <Link className="button" to={`/search/${this.state.category}/${this.state.searchValue}`}>
-            Search
+          <Link  to={`/search/${this.state.category}/${this.state.searchValue}`}>
+            <input className="button" type="submit" value="Search"/>
           </Link>
+        </form>
       </div>
     );
   }

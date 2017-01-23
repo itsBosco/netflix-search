@@ -13,7 +13,8 @@ const Search = React.createClass({
   },
 
   componentDidMount() {
-    axios.get(`http://netflixroulette.net/api/api.php?${this.props.params.category}=${this.props.params.searchValue}`)
+    var params = this.props.params;
+    axios.get(`http://netflixroulette.net/api/api.php?${params.category}=${params.searchValue}`)
       .then((response) => {
         this.setState({netflixRouletteData: response.data});
       })
