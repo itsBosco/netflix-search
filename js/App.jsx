@@ -6,23 +6,13 @@ const Landing = require('./Landing');
 const Search = require('./Search');
 
 const App = React.createClass({
-  getInitialState () {
-    return {
-      searchValue: ''
-    };
-  },
-  handleSearch (searchValue) {
-    this.setState({searchValue: searchValue});
-  },
   render() {
     return (
       <BrowserRouter>
         <div className="app">
-          <Match exactly pattern="/" component={(props) => <Landing
-              handleSearch={this.handleSearch}  {...props}/>} >
+          <Match exactly pattern="/" component={Landing} >
           </Match>
-          <Match pattern="/search" component={(props) => <Search searchType="title"
-              searchValue={this.state.searchValue} {...props}/>} />
+          <Match pattern="/search/:category/:searchValue" component={Search} />
         </div>
       </BrowserRouter>
     );

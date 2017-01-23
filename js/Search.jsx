@@ -8,17 +8,19 @@ const Search = React.createClass({
     };
   },
   componentDidMount() {
-    axios.get(`http://netflixroulette.net/api/api.php?${this.props.searchType}=${this.props.searchValue}`)
+    axios.get(`http://netflixroulette.net/api/api.php?title=${this.props.params.searchValue}`)
       .then((response) => {
         this.setState({netflixRouletteData: response.data});
       })
       .catch((error) => {
-        console.log("netflix roulette error", error);
+        console.log('netflix roulette error', error);
       });
   },
   render() {
     return (
-      <h1>{this.props.searchValue}</h1>
+      <div>
+        <pre><code>{JSON.stringify(this.state.netflixRouletteData, null, 4)}</code></pre>
+      </div>
     );
   }
 });

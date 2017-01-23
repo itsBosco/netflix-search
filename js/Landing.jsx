@@ -2,13 +2,19 @@ const React = require('react');
 const { Link } = require('react-router');
 
 const Landing = React.createClass({
+  getInitialState () {
+    return {
+      searchValue: ''
+    };
+  },
+  handleInput (event) {
+    this.setState({searchValue: event.target.value});
+  },
   render() {
     return (
       <div className="search-box">
-          <input type="text" ref="searchValue" placeholder="House Of Cards" autoFocus/>
-          <button onClick={() => this.props.handleSearch(this.refs.searchValue.value)}>
-            <Link to="/search">Search</Link>
-            </button>
+          <input onChange={this.handleInput} type="text" placeholder="House Of Cards" autoFocus/>
+          <Link to={`/search/title/${this.state.searchValue}`}>Search</Link>
       </div>
     );
   }
