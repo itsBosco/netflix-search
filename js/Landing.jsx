@@ -14,7 +14,7 @@ const Landing = React.createClass({
     return (
       <div className="search-box">
           <input onChange={this.handleInput} type="text" placeholder="House Of Cards" autoFocus/>
-          <Link to={`/search/title/${this.state.searchValue}`}>Search</Link>
+          <Link className="button" to={`/search/title/${this.state.searchValue}`}>Search</Link>
       </div>
     );
   }
