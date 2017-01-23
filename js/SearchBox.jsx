@@ -22,7 +22,7 @@ const SearchBox = React.createClass({
     //Change place holder based on category
     switch (value) {
     case 'title':
-      this.setState({inputPlaceholder: 'The Blacklist'});
+      this.setState({inputPlaceholder: 'The Walking Dead'});
       break;
     case 'director':
       this.setState({inputPlaceholder: 'Quentin Tarantino'});

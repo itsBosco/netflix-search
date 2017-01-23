@@ -5,7 +5,7 @@ const TitleSearch = require('./TitleSearch');
 const DirectorSearch = require('./DirectorSearch');
 const ActorSearch = require('./ActorSearch');
 
-const Search = React.createClass({
+const SearchResults = React.createClass({
   getInitialState () {
     return {
       netflixRouletteData: {}
@@ -45,4 +45,4 @@ const Search = React.createClass({
   }
 });
 
-module.exports = Search;
+module.exports = SearchResults;

@@ -3,7 +3,7 @@ const { render } = require('react-dom');
 const { BrowserRouter, Match } = require('react-router');
 
 const Landing = require('./Landing');
-const Search = require('./Search');
+const SearchResults = require('./SearchResults');
 
 const App = React.createClass({
   render() {
@@ -12,7 +12,7 @@ const App = React.createClass({
         <div className="app">
           <Match exactly pattern="/" component={Landing} >
           </Match>
-          <Match pattern="/search/:category/:searchValue" component={Search} />
+          <Match pattern="/search/:category/:searchValue" component={SearchResults} />
         </div>
       </BrowserRouter>
     );
