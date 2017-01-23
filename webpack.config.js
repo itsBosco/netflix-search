@@ -30,18 +30,6 @@ module.exports = {
       {
         presets:['react', ['es2015', {'modules': false, 'loose': true}]]
       }
-    },
-    {
-      test: /\.css$/,
-      use: [
-        'style-loader',
-        {
-          loader: 'css-loader',
-          options: {
-            url: false
-          }
-        }
-      ]
     }
     ]
   }
