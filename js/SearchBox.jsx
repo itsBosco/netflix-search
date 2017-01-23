@@ -6,7 +6,7 @@ const SearchBox = React.createClass({
     return {
       searchValue: '',
       category: 'title',
-      inputPlaceholder: 'The Blacklist'
+      inputPlaceholder: 'The Walking Dead'
     };
   },
   /* COSTOM METHODS */
