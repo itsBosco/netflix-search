@@ -1,12 +1,17 @@
 const React = require('react');
 const axios = require('axios');
 
+const TitleSearch = require('./TitleSearch');
+const DirectorSearch = require('./DirectorSearch');
+const ActorSearch = require('./ActorSearch');
+
 const Search = React.createClass({
   getInitialState () {
     return {
       netflixRouletteData: {}
     };
   },
+
   componentDidMount() {
     axios.get(`http://netflixroulette.net/api/api.php?${this.props.params.category}=${this.props.params.searchValue}`)
       .then((response) => {
@@ -16,26 +21,20 @@ const Search = React.createClass({
         console.log('netflix roulette error', error);
       });
   },
+
   render() {
     switch (this.props.params.category) {
     case 'title':
       return (
-        <div>
-          <pre><code>{JSON.stringify(this.state.netflixRouletteData, null, 4)}</code></pre>
-          <img src={this.state.netflixRouletteData.poster} alt=""/>
-        </div>
+        <TitleSearch netflixRouletteData={this.state.netflixRouletteData}/>
       );
     case 'director':
       return (
-        <div>
-          <pre><code>{JSON.stringify(this.state.netflixRouletteData, null, 4)}</code></pre>
-        </div>
+        <DirectorSearch netflixRouletteData={this.state.netflixRouletteData} />
       );
     case 'actor':
       return (
-        <div>
-          <pre><code>{JSON.stringify(this.state.netflixRouletteData, null, 4)}</code></pre>
-        </div>
+        <ActorSearch netflixRouletteData={this.state.netflixRouletteData} />
       );
     default:
       return (

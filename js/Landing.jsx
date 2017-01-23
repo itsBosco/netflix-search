@@ -9,9 +9,11 @@ const Landing = React.createClass({
       inputPlaceholder: 'The Blacklist'
     };
   },
+
   handleInput (event) {
     this.setState({searchValue: event.target.value});
   },
+
   handleSelect (event) {
     var value = event.target.value;
 
@@ -30,6 +32,7 @@ const Landing = React.createClass({
       break;
     }
   },
+  
   render() {
     return (
       <div className="search-box">
