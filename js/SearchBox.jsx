@@ -39,8 +39,8 @@ const SearchBox = React.createClass({
     return (
       <div className="search-box">
         <form action="">
-          <input
-            onChange={this.handleInput} type="text"
+          <input type="text" name="searchInput"
+            onChange={this.handleInput}
             placeholder={this.state.inputPlaceholder}
             autoFocus/>
           <select name="" id="" onChange={this.handleSelect}>
