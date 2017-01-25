@@ -4,7 +4,7 @@ const path = require('path');
 
 module.exports = {
   context: __dirname,
-  entry: './js/App.jsx',
+  entry: './src/js/App.jsx',
   output: {
     path: path.join(__dirname, '/public'),
     filename: 'bundle.js'
@@ -23,7 +23,7 @@ module.exports = {
   },
   module: {
     loaders: [{
-      include: path.resolve(__dirname, 'js'),
+      include: path.resolve(__dirname, 'src/js'),
       test: /\.jsx?$/,
       loader: 'babel-loader',
       query:
@@ -32,6 +32,7 @@ module.exports = {
       }
     },//babel-loader
     {
+      include: path.resolve(__dirname, 'src/scss'),
       test: /\.scss$/,
       loaders: ['style-loader', 'css-loader', 'sass-loader']
     }//style-loader
