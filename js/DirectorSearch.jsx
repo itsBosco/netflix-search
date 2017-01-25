@@ -1,4 +1,4 @@
-const React = require('react');
+import React from 'react';
 
 const DirectorSearch = React.createClass({
   render() {

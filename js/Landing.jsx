@@ -1,6 +1,6 @@
-const React = require('react');
+import React from 'react';
 
-const SearchBox = require('./SearchBox');
+import SearchBox from './SearchBox';
 
 const Landing = React.createClass({
   render () {

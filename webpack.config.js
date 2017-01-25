@@ -14,7 +14,7 @@ module.exports = {
     historyApiFallback: true
   },
   resolve: {
-    extensions: ['', '.jsx', '.js', '.json']
+    extensions: ['.jsx', '.js', '.json']
   },
   stats: {
     colors: true,
@@ -30,7 +30,19 @@ module.exports = {
       {
         presets:['react', ['es2015', {'modules': false, 'loose': true}]]
       }
-    }
+    },//babel-loader
+    {
+      test: /\.css$/,
+      use: [
+        'style-loader',
+        {
+          loader: 'css-loader',
+          options: {
+            url: false
+          }
+        }
+      ]
+    }//style-loader
     ]
   }
 };

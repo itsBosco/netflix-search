@@ -1,9 +1,9 @@
-const React = require('react');
-const axios = require('axios');
+import React from 'react';
+import axios from 'axios';
 
-const TitleSearch = require('./TitleSearch');
-const DirectorSearch = require('./DirectorSearch');
-const ActorSearch = require('./ActorSearch');
+import TitleSearch from './TitleSearch';
+import DirectorSearch from './DirectorSearch';
+import ActorSearch from './ActorSearch';
 
 const SearchResults = React.createClass({
   getInitialState () {

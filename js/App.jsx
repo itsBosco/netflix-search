@@ -1,9 +1,10 @@
-const React = require('react');
-const { render } = require('react-dom');
-const { BrowserRouter, Match } = require('react-router');
+import React from 'react';
+import { render } from 'react-dom';
+import { BrowserRouter, Match } from 'react-router';
+import '../public/style.css';
 
-const Landing = require('./Landing');
-const SearchResults = require('./SearchResults');
+import Landing from './Landing';
+import SearchResults from './SearchResults';
 
 const App = React.createClass({
   render() {
