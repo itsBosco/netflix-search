@@ -32,16 +32,8 @@ module.exports = {
       }
     },//babel-loader
     {
-      test: /\.css$/,
-      use: [
-        'style-loader',
-        {
-          loader: 'css-loader',
-          options: {
-            url: false
-          }
-        }
-      ]
+      test: /\.scss$/,
+      loaders: ['style-loader', 'css-loader', 'sass-loader']
     }//style-loader
     ]
   }

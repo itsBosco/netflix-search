@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter, Match } from 'react-router';
-import '../public/style.css';
+import '../public/style.scss';
 
 import Landing from './Landing';
 import SearchResults from './SearchResults';

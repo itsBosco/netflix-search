@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import '../public/searchbox.scss';
 
 const SearchBox = React.createClass({
   getInitialState () {
