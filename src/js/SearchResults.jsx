@@ -1,9 +1,9 @@
 import React from 'react';
 import axios from 'axios';
 
-import TitleSearch from './TitleSearch';
-import DirectorSearch from './DirectorSearch';
-import ActorSearch from './ActorSearch';
+import TitleDetails from './TitleDetails';
+import DirectorDetails from './DirectorDetails';
+import ActorDetails from './ActorDetails';
 
 const SearchResults = React.createClass({
   getInitialState () {
@@ -27,15 +27,15 @@ const SearchResults = React.createClass({
     switch (this.props.params.category) {
     case 'title':
       return (
-        <TitleSearch netflixRouletteData={this.state.netflixRouletteData}/>
+        <TitleDetails netflixRouletteData={this.state.netflixRouletteData}/>
       );
     case 'director':
       return (
-        <DirectorSearch netflixRouletteData={this.state.netflixRouletteData} />
+        <DirectorDetails netflixRouletteData={this.state.netflixRouletteData} />
       );
     case 'actor':
       return (
-        <ActorSearch netflixRouletteData={this.state.netflixRouletteData} />
+        <ActorDetails netflixRouletteData={this.state.netflixRouletteData} />
       );
     default:
       return (
