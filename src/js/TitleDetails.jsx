@@ -7,6 +7,7 @@ const TitleSearch = React.createClass({
       <div>
         <pre><code>{JSON.stringify(netflixRouletteData, null, 4)}</code></pre>
         <img src={netflixRouletteData.poster} alt=""/>
+        <p>{netflixRouletteData.summary}</p>
       </div>
     );
   }
