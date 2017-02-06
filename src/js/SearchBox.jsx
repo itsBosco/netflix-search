@@ -48,7 +48,7 @@ const SearchBox = React.createClass({
             <option value="director">Director</option>
             <option value="actor">Actor</option>
           </select>
-          <Link  to={`/search/${this.state.category}/${this.state.searchValue}`}>
+          <Link  to={`/${this.state.category}/${this.state.searchValue}`}>
             <input className="button" type="submit" value="Search"/>
           </Link>
         </form>
