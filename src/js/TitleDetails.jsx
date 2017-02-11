@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import '../scss/TitleDetails.scss';
 
 const TitleSearch = React.createClass({
   getInitialState () {
@@ -21,9 +22,8 @@ const TitleSearch = React.createClass({
     let netflixRouletteData = this.state.netflixRouletteData;
     return (
       <div className="container">
-        <pre><code>{JSON.stringify(netflixRouletteData, null, 4)}</code></pre>
         <img src={netflixRouletteData.poster} alt=""/>
-        <p>{netflixRouletteData.summary}</p>
+        <p className="summary-text">{netflixRouletteData.summary}</p>
       </div>
     );
   }
