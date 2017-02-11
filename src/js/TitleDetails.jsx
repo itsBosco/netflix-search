@@ -20,7 +20,7 @@ const TitleSearch = React.createClass({
   render() {
     let netflixRouletteData = this.state.netflixRouletteData;
     return (
-      <div>
+      <div className="container">
         <pre><code>{JSON.stringify(netflixRouletteData, null, 4)}</code></pre>
         <img src={netflixRouletteData.poster} alt=""/>
         <p>{netflixRouletteData.summary}</p>

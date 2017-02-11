@@ -20,7 +20,7 @@ const DirectorSearch = React.createClass({
   render() {
     let netflixRouletteData = this.state.netflixRouletteData;
     return (
-      <div>
+      <div className="container">
         <pre><code>{JSON.stringify(netflixRouletteData, null, 4)}</code></pre>
       </div>
 
