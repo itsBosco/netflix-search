@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import '../scss/TitleDetails.scss';
 
 const TitleSearch = React.createClass({
   getInitialState () {
