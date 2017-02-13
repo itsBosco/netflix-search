@@ -12,9 +12,8 @@ const ShowCard = React.createClass({
   },
 
   render() {
-    let show = this.props.show;
     return (
-      <img src={show.poster} alt=""
+      <img src={this.props.show.poster} alt=""
         style={this.state.style}
         onError={this.hideBrokenImage} />
     );
