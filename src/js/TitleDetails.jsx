@@ -4,7 +4,7 @@ import axios from 'axios';
 const TitleSearch = React.createClass({
   getInitialState () {
     return {
-      netflixRouletteData: {}
+      netflixRouletteData: []
     };
   },
   componentDidMount() {

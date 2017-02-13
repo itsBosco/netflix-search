@@ -1,10 +1,11 @@
 import React from 'react';
 import axios from 'axios';
+import ShowCard from './ShowCard';
 
 const ActorSearch = React.createClass({
   getInitialState () {
     return {
-      netflixRouletteData: {}
+      netflixRouletteData: [],
     };
   },
   componentDidMount() {
@@ -18,10 +19,14 @@ const ActorSearch = React.createClass({
       });
   },
   render() {
-    let netflixRouletteData = this.state.netflixRouletteData;
+    console.log(this.state.netflixRouletteData);
     return (
       <div className="container">
-        <pre><code>{JSON.stringify(netflixRouletteData, null, 4)}</code></pre>
+        {this.state.netflixRouletteData.map((show) => {
+          return (
+            <ShowCard key={show.show_id} show={show} />
+          );
+        })}
       </div>
 
     );

@@ -4,7 +4,7 @@ import axios from 'axios';
 const DirectorSearch = React.createClass({
   getInitialState () {
     return {
-      netflixRouletteData: {}
+      netflixRouletteData: []
     };
   },
   componentDidMount() {
