@@ -18,11 +18,10 @@ const TitleSearch = React.createClass({
       });
   },
   render() {
-    let netflixRouletteData = this.state.netflixRouletteData;
     return (
       <div className="container">
-        <img src={netflixRouletteData.poster} alt=""/>
-        <p className="summary-text">{netflixRouletteData.summary}</p>
+        <img src={this.state.netflixRouletteData.poster} alt=""/>
+        <p className="summary-text">{this.state.netflixRouletteData.summary}</p>
       </div>
     );
   }
