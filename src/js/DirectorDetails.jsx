@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import ShowCard from './ShowCard';
 
 const DirectorSearch = React.createClass({
   getInitialState () {
@@ -18,10 +19,13 @@ const DirectorSearch = React.createClass({
       });
   },
   render() {
-    let netflixRouletteData = this.state.netflixRouletteData;
     return (
       <div className="container">
-        <pre><code>{JSON.stringify(netflixRouletteData, null, 4)}</code></pre>
+        {this.state.netflixRouletteData.map((show) => {
+          return (
+            <ShowCard key={show.show_id} show={show} />
+          );
+        })}
       </div>
 
     );
