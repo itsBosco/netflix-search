@@ -19,7 +19,6 @@ const ActorSearch = React.createClass({
       });
   },
   render() {
-    console.log(this.state.netflixRouletteData);
     return (
       <div className="container">
         {this.state.netflixRouletteData.map((show) => {
