@@ -11528,7 +11528,6 @@ var ActorSearch = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createClass({
     });
   },
   render: function render() {
-    console.log(this.state.netflixRouletteData);
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       'div',
       { className: 'container' },
