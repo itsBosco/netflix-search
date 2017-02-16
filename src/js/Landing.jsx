@@ -1,13 +1,13 @@
 import React from 'react';
 
 import SearchBox from './SearchBox';
-import Header from './Header';
+import Navbar from './Navbar';
 
 const Landing = React.createClass({
   render () {
     return (
       <div>
-        <Header />
+        <Navbar />
         <SearchBox />
       </div>
 
@@ -15,4 +15,4 @@ const Landing = React.createClass({
   }
 });
 
-module.exports = Landing;
+export default Landing;

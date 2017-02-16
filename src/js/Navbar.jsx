@@ -1,7 +1,7 @@
-import React from 'React';
-import '../scss/Header.scss';
+import React from 'react';
+import '../scss/navbar.scss';
 
-const Header = React.createClass({
+const Navbar = React.createClass({
   render() {
     return (
       <nav className="navbar">
@@ -15,4 +15,4 @@ const Header = React.createClass({
   }
 });
 
-module.exports = Header;
+export default Navbar;

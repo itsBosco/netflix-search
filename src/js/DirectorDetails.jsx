@@ -1,9 +1,9 @@
 import React from 'react';
 import axios from 'axios';
-import Header from './Header';
+import Navbar from './Navbar';
 import MovieCard from './MovieCard';
 
-const DirectorSearch = React.createClass({
+const DirectorDetails = React.createClass({
   getInitialState () {
     return {
       netflixRouletteData: []
@@ -22,7 +22,7 @@ const DirectorSearch = React.createClass({
   render() {
     return (
       <div className="container">
-        <Header />
+        <Navbar />
         {this.state.netflixRouletteData.map((show) => {
           return (
             <MovieCard key={show.show_id} show={show} />
@@ -34,4 +34,4 @@ const DirectorSearch = React.createClass({
   }
 });
 
-module.exports = DirectorSearch;
+export default DirectorDetails;

@@ -1,8 +1,8 @@
 import React from 'react';
 import axios from 'axios';
-import Header from './Header';
+import Navbar from './Navbar';
 
-const TitleSearch = React.createClass({
+const TitleDetails = React.createClass({
   getInitialState () {
     return {
       netflixRouletteData: []
@@ -21,7 +21,7 @@ const TitleSearch = React.createClass({
   render() {
     return (
       <div className="container">
-        <Header />
+        <Navbar />
         <img src={this.state.netflixRouletteData.poster} alt=""/>
         <p className="summary-text">{this.state.netflixRouletteData.summary}</p>
       </div>
@@ -29,4 +29,4 @@ const TitleSearch = React.createClass({
   }
 });
 
-module.exports = TitleSearch;
+export default TitleDetails;

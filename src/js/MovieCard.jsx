@@ -24,4 +24,4 @@ const ShowCard = React.createClass({
   }
 });
 
-module.exports = ShowCard;
+export default ShowCard;
