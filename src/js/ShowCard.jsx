@@ -19,7 +19,6 @@ const ShowCard = React.createClass({
           <img src={this.props.show.poster} alt={this.props.show.show_title}
             style={this.state.style}
             onError={this.hideBrokenImage} />
-          <p className="hover-text">View Details</p>
         </Link>
     );
   }
