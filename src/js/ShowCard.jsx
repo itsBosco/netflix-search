@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import '../scss/showcard.scss';
 
 const ShowCard = React.createClass({
   getInitialState() {
@@ -14,11 +15,12 @@ const ShowCard = React.createClass({
 
   render() {
     return (
-      <Link to={`/title/${this.props.show.show_title}`}>
-        <img src={this.props.show.poster} alt=""
-          style={this.state.style}
-          onError={this.hideBrokenImage} />
-      </Link>
+        <Link className="show-card" to={`/title/${this.props.show.show_title}`}>
+          <img src={this.props.show.poster} alt={this.props.show.show_title}
+            style={this.state.style}
+            onError={this.hideBrokenImage} />
+          <p className="hover-text">View Details</p>
+        </Link>
     );
   }
 });
