@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
-import '../scss/showcard.scss';
+import '../scss/moviecard.scss';
 
 const ShowCard = React.createClass({
   getInitialState() {
@@ -15,7 +15,7 @@ const ShowCard = React.createClass({
 
   render() {
     return (
-        <Link className="show-card" to={`/title/${this.props.show.show_title}`}>
+        <Link className="movie-card" to={`/title/${this.props.show.show_title}`}>
           <img src={this.props.show.poster} alt={this.props.show.show_title}
             style={this.state.style}
             onError={this.hideBrokenImage} />

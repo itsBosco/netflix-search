@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import ShowCard from './ShowCard';
+import MovieCard from './MovieCard';
 
 const ActorSearch = React.createClass({
   getInitialState () {
@@ -23,7 +23,7 @@ const ActorSearch = React.createClass({
       <div className="container">
         {this.state.netflixRouletteData.map((show) => {
           return (
-            <ShowCard key={show.show_id} show={show} />
+            <MovieCard key={show.show_id} show={show} />
           );
         })}
       </div>
