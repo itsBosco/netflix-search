@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import Header from './Header';
 import MovieCard from './MovieCard';
 
 const ActorSearch = React.createClass({
@@ -21,6 +22,7 @@ const ActorSearch = React.createClass({
   render() {
     return (
       <div className="container">
+        <Header />
         {this.state.netflixRouletteData.map((show) => {
           return (
             <MovieCard key={show.show_id} show={show} />

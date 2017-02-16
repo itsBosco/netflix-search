@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import Header from './Header';
 
 const TitleSearch = React.createClass({
   getInitialState () {
@@ -20,6 +21,7 @@ const TitleSearch = React.createClass({
   render() {
     return (
       <div className="container">
+        <Header />
         <img src={this.state.netflixRouletteData.poster} alt=""/>
         <p className="summary-text">{this.state.netflixRouletteData.summary}</p>
       </div>
