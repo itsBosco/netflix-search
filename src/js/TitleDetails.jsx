@@ -24,6 +24,9 @@ const TitleDetails = React.createClass({
         <Navbar />
         <img src={this.state.netflixRouletteData.poster} alt=""/>
         <p className="summary-text">{this.state.netflixRouletteData.summary}</p>
+        <p>
+          {this.state.netflixRouletteData.show_cast}
+        </p>
       </div>
     );
   }
