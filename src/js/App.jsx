@@ -4,7 +4,9 @@ import { BrowserRouter, Match } from 'react-router';
 import '../scss/style.scss';
 
 import Landing from './Landing';
-import SearchResults from './SearchResults';
+import TitleDetails from './TitleDetails';
+import ActorDetails from './ActorDetails';
+import DirectorDetails from './DirectorDetails';
 
 const App = React.createClass({
   render() {
@@ -13,7 +15,9 @@ const App = React.createClass({
         <div className="app">
           <Match exactly pattern="/" component={Landing} >
           </Match>
-          <Match pattern="/search/:category/:searchValue" component={SearchResults} />
+          <Match pattern="/title/:searchValue" component={TitleDetails} />
+          <Match pattern="/actor/:searchValue" component={ActorDetails} />
+          <Match pattern="/director/:searchValue" component={DirectorDetails} />
         </div>
       </BrowserRouter>
     );
