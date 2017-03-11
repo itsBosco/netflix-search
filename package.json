@@ -4,8 +4,9 @@
   "description": "description",
   "main": "webpack.config.js",
   "scripts": {
-    "build": "webpack -p",
-    "dev": "webpack-dev-server"
+    "build": "webpack",
+    "dev": "webpack-dev-server",
+    "deploy": "npm run build&&gh-pages -d public"
   },
   "author": "Zahier Smith",
   "license": "ISC",
@@ -30,6 +31,6 @@
     "history": "^4.5.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "react-router": "4.0.0-alpha.5"
+    "react-router": "^4.0.0-alpha.5"
   }
 }
