@@ -7,7 +7,7 @@ const Navbar = React.createClass({
       <nav className="navbar">
         <ul>
           <li>
-            <a href="/"><img src="logo.png" alt="Netflix Search"/></a>
+            <a href="#"><img src="logo.png" alt="Netflix Search"/></a>
           </li>
         </ul>
       </nav>
