@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { HashRouter, Route} from 'react-router-dom';
-import './App.css';
 
 import Landing from './components/Landing/Landing';
 import TitleDetails from './components/TitleDetails/TitleDetails';
