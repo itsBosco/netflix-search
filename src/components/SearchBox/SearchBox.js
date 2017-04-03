@@ -6,8 +6,8 @@ const SearchBox = React.createClass({
   getInitialState () {
     return {
       searchValue: '',
-      category: 'title',
-      inputPlaceholder: 'The Walking Dead'
+      category: 'director',
+      inputPlaceholder: 'Quentin Tarantino'
     };
   },
   /* COSTOM METHODS */
@@ -46,9 +46,9 @@ const SearchBox = React.createClass({
             placeholder={this.state.inputPlaceholder}
             autoFocus/>
           <select name="" id="" onChange={this.handleSelect}>
-            <option value="title">Title</option>
             <option value="director">Director</option>
             <option value="actor">Actor</option>
+            <option value="title">Title</option>
           </select>
           <Link  to={`/${this.state.category}/${this.state.searchValue}`}>
             <input className="button" type="submit" value="Search"/>

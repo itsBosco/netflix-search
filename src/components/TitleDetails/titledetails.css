@@ -1,0 +1,35 @@
+.container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.image {
+    position: relative; 
+    text-align: center;
+}
+
+.image p {
+    position: absolute; 
+    left: 0; 
+    width: 100%; 
+    bottom: 10%;
+}
+
+.image p span {
+    color: white; 
+    font: bold 15px/27px Helvetica, Sans-Serif; 
+    letter-spacing: -1px;  
+    background: rgb(0, 0, 0); /* fallback color */
+    background: rgba(0, 0, 0, 0.6);
+    padding: 5px; 
+}
+
+.cast-list{
+    flex: 1 100%;
+    text-align: center;
+}
+
+.cast-list li{
+    display: inline;
+}

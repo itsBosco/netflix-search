@@ -6,19 +6,6 @@ html, body{
   padding: 0;
 }
 
-.container{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  text-align: center;
-}
-
-.summary-text{
-  padding: 60px;
-  width: 40%;
-  text-align: center;
-}
-
 a{
   text-decoration: none;
   color: #EEE;
