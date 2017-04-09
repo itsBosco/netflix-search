@@ -8,7 +8,8 @@ const TitleDetails = React.createClass({
   getInitialState () {
     return {
       netflixRouletteData: [],
-      showCast: []
+      showCast: [],
+      noData: false
     };
   },
   componentDidMount() {
@@ -19,7 +20,7 @@ const TitleDetails = React.createClass({
         this.setState({showCast: this.state.netflixRouletteData.show_cast.split(',')});
       })
       .catch((error) => {
-        console.log('netflix roulette error', error);
+        this.setState({noData: true});
       });
   },
 
@@ -28,24 +29,33 @@ const TitleDetails = React.createClass({
 
   /* RENDER */
   render() {
-    return (
-      <div className="container">
-        <Header />
-        <div className="image">
-          <img src={this.state.netflixRouletteData.poster} alt=""/>
-          <p><span>{this.state.netflixRouletteData.summary}</span></p>
+    if(this.state.noData) {
+      return (
+        <div className="container">
+          <Header />
+          <h1>Sorry, no results found. :(</h1>
         </div>
-        <ul className="cast-list">
-          {this.state.showCast.map((actor, index) => {
-            return (
-              <li key={index}>
-                <Link to={`/actor/${actor}`}>{actor}</Link>
-              ,</li>
-            );
-          })}
-        </ul>
-      </div>
-    );
+      ); 
+    } else {
+      return (
+        <div className="container">
+          <Header />
+          <div className="image">
+            <img src={this.state.netflixRouletteData.poster} alt=""/>
+            <p><span>{this.state.netflixRouletteData.summary}</span></p>
+          </div>
+          <ul className="cast-list">
+            {this.state.showCast.map((actor, index) => {
+              return (
+                <li key={index}>
+                  <Link to={`/actor/${actor}`}>{actor}</Link>
+                ,</li>
+              );
+            })}
+          </ul>
+        </div>
+      );
+    }
   }
 });
 

@@ -6,7 +6,8 @@ import MovieCard from '../MovieCard/MovieCard';
 const DirectorDetails = React.createClass({
   getInitialState () {
     return {
-      netflixRouletteData: []
+      netflixRouletteData: [],
+      noData: false
     };
   },
   componentDidMount() {
@@ -16,21 +17,29 @@ const DirectorDetails = React.createClass({
         this.setState({netflixRouletteData: response.data});
       })
       .catch((error) => {
-        console.log('netflix roulette error', error);
+        this.setState({noData: true});
       });
   },
   render() {
-    return (
-      <div className="container">
-        <Header />
-        {this.state.netflixRouletteData.map((show) => {
-          return (
-            <MovieCard key={show.show_id} show={show} />
-          );
-        })}
-      </div>
-
-    );
+    if(this.state.noData) {
+      return (
+        <div className="container">
+          <Header />
+          <h1>Sorry, no results found. :(</h1>
+        </div>
+      ); 
+    } else {
+      return (
+        <div className="container">
+          <Header />
+          {this.state.netflixRouletteData.map((show) => {
+            return (
+              <MovieCard key={show.show_id} show={show} />
+            );
+          })}
+        </div>
+      );
+    }
   }
 });
 
