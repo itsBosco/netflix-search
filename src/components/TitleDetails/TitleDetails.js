@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import Navbar from '../Navbar/Navbar';
+import Header from '../Header/Header';
 import './titledetails.css'
 
 const TitleDetails = React.createClass({
@@ -30,7 +30,7 @@ const TitleDetails = React.createClass({
   render() {
     return (
       <div className="container">
-        <Navbar />
+        <Header />
         <div className="image">
           <img src={this.state.netflixRouletteData.poster} alt=""/>
           <p><span>{this.state.netflixRouletteData.summary}</span></p>

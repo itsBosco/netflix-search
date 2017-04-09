@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import Navbar from '../Navbar/Navbar';
+import Header from '../Header/Header';
 import MovieCard from '../MovieCard/MovieCard';
 
 const DirectorDetails = React.createClass({
@@ -22,7 +22,7 @@ const DirectorDetails = React.createClass({
   render() {
     return (
       <div className="container">
-        <Navbar />
+        <Header />
         {this.state.netflixRouletteData.map((show) => {
           return (
             <MovieCard key={show.show_id} show={show} />
