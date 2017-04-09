@@ -4,13 +4,9 @@ import './header.css';
 const Header = React.createClass({
   render() {
     return (
-      <nav className="navbar">
-        <ul>
-          <li>
-            <a href="#"><img src="logo.png" alt="Netflix Search"/></a>
-          </li>
-        </ul>
-      </nav>
+      <header className="navbar">
+          <a href="#"><img src="logo.png" alt="Netflix Search"/></a>
+      </header>
     );
   }
 });
