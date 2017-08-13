@@ -12,7 +12,7 @@ const ActorDetails = React.createClass({
   },
   componentDidMount() {
     var params = this.props.match.params;
-    axios.get(`http://netflixroulette.net/api/api.php?actor=${params.searchValue}`)
+    axios.get(`https://netflixroulette.net/api/api.php?actor=${params.searchValue}`)
       .then((response) => {
         this.setState({netflixRouletteData: response.data});
       })
